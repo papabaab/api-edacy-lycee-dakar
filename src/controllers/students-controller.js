@@ -14,10 +14,17 @@ exports.getById = (req, res) => {
 
 exports.create = (req, res)=>{
 
+
     console.log('student', req.body)
-    const newStudent = req.body
-    if(userService.alreadyExists(newStudent.username)){
+    const {firstname, lastname, username, password, email} = req.body
+    if(userService.alreadyExists(username)){
         res.json({message: 'User already exists'}).status(400)
+        return
+    } else if (firstname == '' || lastname == '' || username == '' || password == '' || email == ''
+    || firstname == null || lastname == null || username == null || password == null || email == null
+    || firstname == undefined || lastname == undefined || username == undefined || password == undefined || email == undefined) {
+        
+        res.json({message: 'CONTENT OR PARAMS MISSING'}).status(400)
         return
     }
     const data = userService.create(newStudent)
