@@ -1,18 +1,20 @@
-const express = require("express");
+import express from "express";
+import bodyParser from "body-parser";
+// const bodyParser = require("body-parser");
 require('dotenv').config()
 //instantiation of server app
-const app = express();
+const app = express()
 
 
 
 // body parser
-const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 
 // importing routers
-const studentsRouter = require('./routes/studentsRoute')
+// const studentsRouter = require('./routes/studentsRoute')
+import studentsRouter  from './routes/studentsRoute'
 
 
 // plugin routers to 

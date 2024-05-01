@@ -1,23 +1,33 @@
-const userService = require('../services/user-service')
+import { StudentsService } from './../services/user-service';
+import { Request, Response } from "express"
+const studentService = new StudentsService()
+// const studentService = require('../services/user-service')
 
-exports.getAll = (req, res)=>{
-    const data = userService.getAll()
+
+
+
+export const studentsController = {
+
+
+getAll (req:Request, res:Response){
+    const data = studentService.getAll()
     res.json(data)
-}
+},
 
 
-exports.getById = (req, res) => {
-    const data = userService.getById(req.params.id)
+getById (req:Request, res:Response) {
+    const data = studentService.getById(req.params.id)
     res.json(data)
-}
+},
 
 
-exports.create = (req, res)=>{
+create (req:Request, res:Response){
 
 
     console.log('student', req.body)
     const {firstname, lastname, username, password, email} = req.body
-    if(userService.alreadyExists(username)){
+    const newStudent = req.body;
+    if(studentService.alreadyExists(username)){
         res.json({message: 'User already exists'}).status(400)
         return
     } else if (firstname == '' || lastname == '' || username == '' || password == '' || email == ''
@@ -27,21 +37,24 @@ exports.create = (req, res)=>{
         res.json({message: 'CONTENT OR PARAMS MISSING'}).status(400)
         return
     }
-    const data = userService.create(newStudent)
-    res.json('Student created', data).status(201)
-}
+    const data = studentService.create(newStudent)
+    res.json('Student created'+ data).status(201)
+},
 
 
-exports.update = (req, res) => {
+update (req:Request, res:Response) {
     const studentId = req.params.id
     const student = req.body
-     userService.update(studentId, student)
+     studentService.update(studentId, student)
      res.json('User updated').status(201)
+},
+
+
+delete (req:Request, res:Response) {
+    const id = req.params.id
+    studentService.delete(id)
+    res.sendStatus(204)
 }
 
 
-exports.delete = (req, res) => {
-    const id = req.params.id
-    userService.delete(id)
-    res.sendStatus(204)
 }
