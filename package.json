@@ -2,16 +2,17 @@
   "name": "api.lycee-dakar",
   "version": "1.0.0",
   "description": "app serveur pour le lycée d'excellence de Dakar - exercice Edacy",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon ./src/index.js"
   },
   "keywords": [],
   "author": "Papabaab",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "sqlite3": "^5.1.7"
   },
