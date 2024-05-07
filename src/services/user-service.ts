@@ -1,45 +1,67 @@
-import { Student } from "../models/student.model";
+import { Student } from './../models/student.model';
+import { AppDatabase } from "./database";
 
-let data: Student[] = [];
+// let data: Student[] = [];
 
 
 
 export class StudentsService {
 
+db: AppDatabase = new AppDatabase()
 
-
-getAll  () {
-    return data;
+    async getAll(): Promise<Student[]>  {
+    // return data;
+    const allStudents = await this.db.getAll()
+    console.log("ALL STUDENTS IN THE DB: ", allStudents)
+    return allStudents
 }
 
 
-getById  (id: number|string) {
-    return data.find(e=>e.id == id)
+    async getById  (id: number|string): Promise<Student | undefined> {
+    // return data.find(e=>e.id == id)
+    try {
+    const student:Student[] = await this.db.getById(id)
+    return student[0]
+    } catch (error) {console.log(error)}
+
 }
 
 
-create (student: Student){
-    const newStudent = {...student, id: Date.now().toString()}
-    data.push(newStudent)
-    return newStudent
+    async create (student: Student): Promise<Student|undefined>{
+    // const newStudent = {...student, id: Date.now().toString()}
+    // data.push(newStudent)
+    // return newStudent
+    const createdStudent: Student[] | undefined = await this.db.create(student) 
+    console.log("SERVICE: created Student: ", createdStudent)
+    return createdStudent? createdStudent[0]: undefined
 }
 
 
-alreadyExists  (username: string) {
-    return data.find((e:Student)=>e.username == username)? true: false
+
+    async alreadyExists  (username: string) : Promise<boolean> {
+    // return data.find((e:Student)=>e.username == username)? true: false
+    const alreadyExists: boolean = await this.db.alreadyExists(username)
+    return alreadyExists
 }
 
 
-delete  (id:string|number) {
-    data = data.filter(e=>e.id !== id)
+    async delete  (id:string|number) {
+    // data = data.filter(e=>e.id !== id)
+    const res = await this.db.deleteStudent(id)
+    console.log('STUDENT DELETED', res)
+    return res
+    
 }
 
 
-update  (id:string|number, student:Student) {
-    const index = data.findIndex((e:Student)=>e.id == id)
-    if(index != -1){
-        data[index] = {...student, id}
-    } else throw new Error('User not found')
+    async update  (id:string|number, student:Student): Promise<Student|undefined> {
+    // const index = data.findIndex((e:Student)=>e.id == id)
+    // if(index != -1){
+    //     data[index] = {...student, id}
+    // } else throw new Error('User not found')    
+    const result :Student[]|undefined = await this.db.update(id, student)
+    console.log('USER UPDATED: ', result)
+    return result? result[0]: undefined
 }
 
 }
