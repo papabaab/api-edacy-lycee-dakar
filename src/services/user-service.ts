@@ -17,11 +17,11 @@ db: AppDatabase = new AppDatabase()
 }
 
 
-    async getById  (id: number|string): Promise<Student | undefined> {
+    async getById  (id: number|string): Promise<Student | null|undefined> {
     // return data.find(e=>e.id == id)
     try {
-    const student:Student[] = await this.db.getById(id)
-    return student[0]
+    const student:Student|null = await this.db.getById(id)
+    return student
     } catch (error) {console.log(error)}
 
 }
@@ -31,9 +31,9 @@ db: AppDatabase = new AppDatabase()
     // const newStudent = {...student, id: Date.now().toString()}
     // data.push(newStudent)
     // return newStudent
-    const createdStudent: Student[] | undefined = await this.db.create(student) 
+    const createdStudent: Student | null | undefined = await this.db.create(student) 
     console.log("SERVICE: created Student: ", createdStudent)
-    return createdStudent? createdStudent[0]: undefined
+    return createdStudent? createdStudent: undefined
 }
 
 
