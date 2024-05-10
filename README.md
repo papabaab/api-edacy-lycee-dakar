@@ -45,9 +45,11 @@ interface Angular en cours de développement...
 `cd api-edacy-lycee-dakar`
 
 - #### Créer un fichier .env avec les données de votre choix
+  voir .env-sample
 
 - #### instalation de dépendanes:
 `npm install`
+
 - #### run the app
 `npm run dev`
 
