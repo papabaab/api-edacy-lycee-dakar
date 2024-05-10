@@ -54,4 +54,3 @@ interface Angular en cours de développement...
 `npm run dev`
 
 ## TESTER API VIA POSTMAN
-`https://api.postman.com/collections/34644417-4d2645a0-54b8-464b-ac0e-4acc75a6550b?access_key=PMAT-01HXHT1BGTY18Z870BNNQBCANE`
