@@ -12,7 +12,7 @@ db: AppDatabase = new AppDatabase()
     async getAll(): Promise<Student[]>  {
     // return data;
     const allStudents = await this.db.getAll()
-    console.log("ALL STUDENTS IN THE DB: ", allStudents)
+    console.log("SERVICE: all students in db: ", allStudents)
     return allStudents
 }
 
@@ -27,11 +27,11 @@ db: AppDatabase = new AppDatabase()
 }
 
 
-    async create (student: Student): Promise<Student|undefined>{
+     async create (student: Student): Promise<Student | undefined> {
     // const newStudent = {...student, id: Date.now().toString()}
     // data.push(newStudent)
     // return newStudent
-    const createdStudent: Student | null | undefined = await this.db.create(student) 
+    const createdStudent: Student | null = await this.db.create(student) 
     console.log("SERVICE: created Student: ", createdStudent)
     return createdStudent? createdStudent: undefined
 }

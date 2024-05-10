@@ -19,7 +19,6 @@ export class AppDatabase {
         // })
         AppDataSource.initialize().then(async () => {
 
-            console.log("Inserting a new user into the database...")
             // const user = new Student()
             // user.firstname = "FirstUser"
             // user.lastname = "FirstLastName"
@@ -101,19 +100,15 @@ export class AppDatabase {
     }
 
 
-    async create(student: Student): Promise<Student|null|undefined> {
-        try{
+    async create(student: Student): Promise<Student> {
         // await this.query(`INSERT INTO students
         // (firstname, lastname, username, password, email)
         // VALUES
         // (?,?,?,?,?)`, [student.firstname, student.lastname, student.username, student.password, student.email])
-        await AppDataSource.manager.create(Student, student)
         // return this.query(`SELECT * FROM students WHERE username = ?`, [student.username]) as Promise<Student[]>
-        return AppDataSource.manager.findOneBy(Student, {username: student.username})
-        }
-        catch(err){
-            console.error(err)
-        }
+        const newStudent:Student =  await AppDataSource.manager.save(Student, student)
+        console.log("DATABASE: created Student: ", newStudent)
+        return newStudent
     }
 
     async update(id: string | number, student: Student): Promise<Student[] | undefined> {

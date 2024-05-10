@@ -70,7 +70,7 @@ async create (req:Request, res:Response){
         try{
     const id = req.params.id
    await  this.studentService.delete(id)
-    res.sendStatus(204)
+    res.sendStatus(204).json({message: 'User deleted'})
         }
         catch(err){res.json({message: 'ERROR'}).status(500)}
 }

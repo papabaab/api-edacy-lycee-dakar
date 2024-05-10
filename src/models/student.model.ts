@@ -13,7 +13,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 @Entity()
 export class Student{
 
-    @PrimaryGeneratedColumn({type: "int"})
+    @PrimaryGeneratedColumn()
     id?: number | string
 
     @Column()
