@@ -29,6 +29,7 @@ Finally, for a first version of this platform he will need a part where he can l
 Express.js
 ##### REMARQUES
 interface Angular en cours de développement...
+`https://github.com/papabaab/edacy-lycee-dakar.git`
 
 ## INSTALLATION
 
