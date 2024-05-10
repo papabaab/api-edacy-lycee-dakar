@@ -3,6 +3,11 @@
 ## DESCRIPTION
 Ceci est un TP demandé par Coach Khoussa
 Dans ce projet, des opérations CRUD ont été implémentées pour gestion des étudiants d'une école.
+- inscrire nouvel étudiant (CREATE)
+- Voir étudiant (READ)
+- voir liste des étudiants (READ)
+- modifier étudiant (UDPATE)
+- supprimer étudiant (DELETE)
 
 ## ÉNONCÉ DE L'EXERCISE - EDACY.COM
 The Lycée d'Excellence de Dakar is today the best high school in Senegal for its quality of education and its results. We wish to innovate and continue to remain the leader by optimizing the entire educational process of the students and offering visibility to parents and the administration.
