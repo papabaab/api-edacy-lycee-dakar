@@ -15,6 +15,15 @@ interface en cours...
 
 
 ## INSTALLATION
+
+#### cloner le projet au niveau de votre machine
+git clone https://github.com/papabaab/api-edacy-lycee-dakar.git
+
+#### naviguer dans le projet
+cd api-edacy-lycee-dakar
+
+#### Créer un fichier .env avec les données de votre choix
+
 #### instalation de dépendanes:
 `npm install`
 #### run the app
