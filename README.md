@@ -20,7 +20,7 @@ interface en cours...
 git clone https://github.com/papabaab/api-edacy-lycee-dakar.git
 
 #### naviguer dans le projet
-cd api-edacy-lycee-dakar
+`cd api-edacy-lycee-dakar`
 
 #### Créer un fichier .env avec les données de votre choix
 
