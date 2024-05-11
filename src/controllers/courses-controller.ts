@@ -58,7 +58,7 @@ async create (req:Request, res:Response){
     try{
      const courseUpdated = await this.courseService.update(courseId, course)
      console.log('CONTROLLER: course updated: ', courseUpdated)
-     res.json({message: 'Course updated', ...courseUpdated}).status(201)
+     res.json({message: 'Course updated', course: {...courseUpdated}}).status(201)
     }
     catch(err){res.json({message: 'ERROR'}).status(500)}
 }
@@ -68,7 +68,7 @@ async create (req:Request, res:Response){
         try{
             const courseId = req.params.courseId
             await  this.courseService.delete(courseId)
-            res.sendStatus(200).json({message: 'Course deleted'})
+            res.json({message: 'Course deleted'})
         }
         catch(err){res.json({message: 'ERROR', error: err}).status(500)}
 }

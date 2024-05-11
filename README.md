@@ -51,8 +51,8 @@ Finally, for a first version of this platform he will need a part where he can l
 
 
 ##### REMARQUES
-interface Angular en cours de développement...
-[Link to Angular interface project repo](https://github.com/papabaab/edacy-lycee-dakar.git)
+interface Angular -->
+`[Link to Angular interface project repo](https://github.com/papabaab/edacy-lycee-dakar.git)`
 
 ## INSTALLATION
 

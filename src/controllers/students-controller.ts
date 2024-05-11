@@ -87,7 +87,7 @@ export class StudentController {
     try {
       const studentId = req.params.studentId;
       await this.studentService.delete(studentId);
-      res.sendStatus(200).json({ message: "Student deleted" });
+      res.json({ message: "Student deleted" });
     } catch (err) {
       res.json({ message: "ERROR" }).status(500);
     }
