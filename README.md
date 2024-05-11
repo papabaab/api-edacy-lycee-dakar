@@ -1,5 +1,7 @@
-#                                        TRAVAUX PRATIQUES EDACY - EXPRESS.JS
+<h1 align = "center">TRAVAUX PRATIQUES EDACY - EXPRESS.JS</h1>
+<div align = "center">
 ![LYCEE D'EXCELLENCE DAKAR - TP](src/assets/imgs/LYCEE_D'EXCELLE_DAKAR_EDACY.COM.png)
+</div>
 ![NODE VERSION](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fpapabaab%2Fapi-edacy-lycee-dakar%2Fraw%2Fmaster%2Fpackage.json&query=%24.node&style=for-the-badge&logo=npm&label=Node%20version)  ![EXPRESS VERSION](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fpapabaab%2Fapi-edacy-lycee-dakar%2Fraw%2Fmaster%2Fpackage.json&query=%24.dependencies.express&style=for-the-badge&logo=express&label=express)
 
 
