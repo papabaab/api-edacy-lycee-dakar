@@ -1,5 +1,9 @@
 # TRAVAUX PRATIQUES EDACY - EXPRESS.JS
 ![LYCEE D'EXCELLENCE DAKAR - TP](src/assets/imgs/LYCEE_D'EXCELLE_DAKAR_EDACY.COM.png)
+![NODE VERSION](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fpapabaab%2Fapi-edacy-lycee-dakar%2Fraw%2Fmaster%2Fpackage.json&query=%24.node&style=for-the-badge&logo=npm&label=Node%20version)  ![EXPRESS VERSION](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fpapabaab%2Fapi-edacy-lycee-dakar%2Fraw%2Fmaster%2Fpackage.json&query=%24.dependencies.express&style=for-the-badge&logo=express&label=express)
+
+
+
 ## DESCRIPTION
 Ceci est un TP demandé par Coach Khoussa
 Dans ce projet, des opérations CRUD ont été implémentées pour gestion des étudiants d'une école.
