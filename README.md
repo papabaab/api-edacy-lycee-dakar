@@ -46,11 +46,7 @@ Finally, for a first version of this platform he will need a part where he can l
 
 ##### TYPE DE BASE DE DONNÉES
 
-<img width = "200" alt = "Sqlite3" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.8g3-hiAQhkGcVBDvZREw4wAAAA%26pid%3DApi&f=1&ipt=a8b4fd10a28cefc9fd325d5d6e0261df156d4ef48671b6659a2205debec39711&ipo=images">
-
-<img width = "200" alt = "Typescript" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.8qyBBxhvUiHHggSAU090uwHaDw%26pid%3DApi&f=1&ipt=c3f67a33583f84b97cec1d5b1b531a5a7209a587fb8237e614219eb4813e9d93&ipo=images">
-
-<img width = "200" alt = "Express.js" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.1fZjQpkRMKTBGN_7H5YnFwHaGL%26pid%3DApi&f=1&ipt=af53a3b1b07e280738abf218a218d388fa9da8fdb57a514e828d012c2f86fc22&ipo=images">
+<img width = "100" alt = "Sqlite3" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.0ulhdSg92KN_cR8dcSZ4_QHaFj%26pid%3DApi&f=1&ipt=52dea679ba50e61a983af3ce37aa34c0cc2081da045343159febad5657ef5e3c&ipo=images"> <img width = "100" alt = "Typescript" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.8qyBBxhvUiHHggSAU090uwHaDw%26pid%3DApi&f=1&ipt=c3f67a33583f84b97cec1d5b1b531a5a7209a587fb8237e614219eb4813e9d93&ipo=images"> <img width = "100" alt = "Express.js" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CLf2MbiumJ4rjRvaZtMWigHaEK%26pid%3DApi&f=1&ipt=ed4d2d3218149f61efa882a54bc9f926f87b20f34ad2b6110cd3ad37addb3344&ipo=images">
 
 
 
