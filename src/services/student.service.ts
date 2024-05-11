@@ -1,17 +1,18 @@
-import { Student } from './../models/student.model';
-import { AppDatabase } from "./database";
+
+import { Student } from '../models/student.model';
+import { StudentDataSource } from "./student.datasource";
 
 // let data: Student[] = [];
 
 
 
-export class StudentsService {
+export class StudentService {
 
-db: AppDatabase = new AppDatabase()
+db: StudentDataSource = new StudentDataSource()
 
     async getAll(): Promise<Student[]>  {
     // return data;
-    const allStudents = await this.db.getAll()
+    const allStudents = await this.db.getAllStudents()
     console.log("SERVICE: all students in db: ", allStudents)
     return allStudents
 }
@@ -20,7 +21,7 @@ db: AppDatabase = new AppDatabase()
     async getById  (id: number|string): Promise<Student | null|undefined> {
     // return data.find(e=>e.id == id)
     try {
-    const student:Student|null = await this.db.getById(id)
+    const student:Student|null = await this.db.getStudentById(id)
     return student
     } catch (error) {console.log(error)}
 
@@ -31,7 +32,7 @@ db: AppDatabase = new AppDatabase()
     // const newStudent = {...student, id: Date.now().toString()}
     // data.push(newStudent)
     // return newStudent
-    const createdStudent: Student | null = await this.db.create(student) 
+    const createdStudent: Student | null = await this.db.insertNewStudent(student) 
     console.log("SERVICE: created Student: ", createdStudent)
     return createdStudent? createdStudent: undefined
 }
@@ -40,7 +41,7 @@ db: AppDatabase = new AppDatabase()
 
     async alreadyExists  (username: string) : Promise<boolean> {
     // return data.find((e:Student)=>e.username == username)? true: false
-    const alreadyExists: boolean = await this.db.alreadyExists(username)
+    const alreadyExists: boolean = await this.db.studentAlreadyExists(username)
     return alreadyExists
 }
 
@@ -59,8 +60,8 @@ db: AppDatabase = new AppDatabase()
     // if(index != -1){
     //     data[index] = {...student, id}
     // } else throw new Error('User not found')    
-    const result :Student[]|undefined = await this.db.update(id, student)
-    console.log('USER UPDATED: ', result)
+    const result :Student[]|undefined = await this.db.updateStudent(id, student)
+    console.log('STUDENT UPDATED: ', result)
     return result? result[0]: undefined
 }
 

@@ -1,25 +1,28 @@
+
 // export interface Student{
 
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity()
-export class Student{
+export class Course {
 
     @PrimaryGeneratedColumn()
-    studentId?: number | string
+    courseId?: number | string
 
     @Column()
-    firstname!: string
+    startDate!: string
 
     @Column()
-    lastname!: string
-    
+    endDate!: string
+
     @Column()
-    username!: string
+    courseTitle!: string
     
     @Column({nullable: true})
-    email?: string
-    
-    @Column()
-    courseId!: number
+    professor!: string
+
+
+    @Column({nullable: true})
+    description!: string
 }
+
