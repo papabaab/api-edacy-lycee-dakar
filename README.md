@@ -71,4 +71,4 @@ interface Angular -->
 - #### run the app
 `npm run dev`
 
-## TESTER API VIA POSTMAN
+## TESTER API VIA POSTMAN ou AVEC L'INTERFACE ANGULAR
