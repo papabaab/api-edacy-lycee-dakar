@@ -44,7 +44,7 @@ Finally, for a first version of this platform he will need a part where he can l
 
 ## TECHONOLOGIES UTILISÉES
 
-<img width = "100" alt = "Sqlite3" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.0ulhdSg92KN_cR8dcSZ4_QHaFj%26pid%3DApi&f=1&ipt=52dea679ba50e61a983af3ce37aa34c0cc2081da045343159febad5657ef5e3c&ipo=images"> <img width = "100" alt = "Typescript" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.8qyBBxhvUiHHggSAU090uwHaDw%26pid%3DApi&f=1&ipt=c3f67a33583f84b97cec1d5b1b531a5a7209a587fb8237e614219eb4813e9d93&ipo=images"> <img width = "100" alt = "Express.js" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CLf2MbiumJ4rjRvaZtMWigHaEK%26pid%3DApi&f=1&ipt=ed4d2d3218149f61efa882a54bc9f926f87b20f34ad2b6110cd3ad37addb3344&ipo=images">
+<img height = "100" alt = "Sqlite3" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.0ulhdSg92KN_cR8dcSZ4_QHaFj%26pid%3DApi&f=1&ipt=52dea679ba50e61a983af3ce37aa34c0cc2081da045343159febad5657ef5e3c&ipo=images"> <img height = "100" alt = "Typescript" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.8qyBBxhvUiHHggSAU090uwHaDw%26pid%3DApi&f=1&ipt=c3f67a33583f84b97cec1d5b1b531a5a7209a587fb8237e614219eb4813e9d93&ipo=images"> <img height = "100" alt = "Express.js" src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CLf2MbiumJ4rjRvaZtMWigHaEK%26pid%3DApi&f=1&ipt=ed4d2d3218149f61efa882a54bc9f926f87b20f34ad2b6110cd3ad37addb3344&ipo=images">
 
 
 
