@@ -13,7 +13,8 @@ export class StudentDataSource {
         return AppDataSource.manager.findOneBy(Student, {studentId: studentId})
     }
 
-    getAllStudents(): Promise<Student[]> {
+    getAllStudents(courseId?: number): Promise<Student[]> {
+        if(courseId) return AppDataSource.manager.findBy(Student, {courseId: courseId})
         return AppDataSource.manager.find(Student)
     }
 

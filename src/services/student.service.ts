@@ -10,9 +10,9 @@ export class StudentService {
 
 db: StudentDataSource = new StudentDataSource()
 
-    async getAll(): Promise<Student[]>  {
+    async getAll(courseId?: number): Promise<Student[]>  {
     // return data;
-    const allStudents = await this.db.getAllStudents()
+    const allStudents = await this.db.getAllStudents(courseId)
     console.log("SERVICE: all students in db: ", allStudents)
     return allStudents
 }

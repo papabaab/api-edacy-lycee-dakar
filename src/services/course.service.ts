@@ -1,3 +1,4 @@
+import { Student } from '../models/student.model';
 import { Course } from './../models/course.model';
 import { CourseDataSource } from "./course.datasource";
 import { StudentDataSource } from './student.datasource';
@@ -11,7 +12,10 @@ studentTable: StudentDataSource = new StudentDataSource()
 
     async getAll(): Promise<Course[]>  {
     // return data;
-    const allCourses: Course[] = await this.courseTable.getAllCourses()
+    const allCourses: FullCourse[] = await this.courseTable.getAllCourses()
+    for(var course of allCourses){
+        course.students = await this.studentTable.getAllStudents(Number(course.courseId))
+    }
     console.log("SERVICE: all courses in db: ", allCourses)
     return allCourses
 }
@@ -55,4 +59,10 @@ studentTable: StudentDataSource = new StudentDataSource()
     return result? result[0]: undefined
 }
 
+}
+
+
+
+export interface FullCourse extends Course {
+    students?: Student[]
 }

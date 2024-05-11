@@ -1,7 +1,6 @@
 import { Course } from '../models/course.model';
 import { Request, Response } from "express"
 import { CourseService } from '../services/course.service';
-import { StudentService } from '../services/student.service';
 
 
 
@@ -17,7 +16,7 @@ export class CourseController  {
     async getAll (req:Request, res:Response){
     const courses: Course[] = await this.courseService.getAll()
     console.log("CONTROLLER: all courses in db ", courses)
-    res.json(courses)
+    res.json(courses).status(200)
 }
 
 
