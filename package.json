@@ -1,6 +1,7 @@
 {
   "name": "api.lycee-dakar",
   "version": "1.0.0",
+  "node": "18.12.1",
   "description": "app serveur pour le lycée d'excellence de Dakar - exercice Edacy",
   "main": "src/index.ts",
   "scripts": {

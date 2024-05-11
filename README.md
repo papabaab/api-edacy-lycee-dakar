@@ -1,8 +1,14 @@
 # TRAVAUX PRATIQUES EDACY - EXPRESS.JS
-
+![LYCEE D'EXCELLENCE DAKAR - TP](src/assets/imgs/LYCEE_D'EXCELLE_DAKAR_EDACY.COM.png)
 ## DESCRIPTION
 Ceci est un TP demandé par Coach Khoussa
 Dans ce projet, des opérations CRUD ont été implémentées pour gestion des étudiants d'une école.
+- Créer une nouvelle classe (CREATE)
+- Voir classe (READ)
+- voir liste des classes (READ)
+- modifier classe (UDPATE)
+- supprimer classe (DELETE)
+
 - inscrire nouvel étudiant (CREATE)
 - Voir étudiant (READ)
 - voir liste des étudiants (READ)
