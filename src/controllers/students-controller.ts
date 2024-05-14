@@ -10,7 +10,8 @@ export class StudentController {
   }
 
   async getAll(req: Request, res: Response) {
-    const students: Student[] = await this.studentService.getAll();
+    const courseId = req.params.courseId
+    const students: Student[] = await this.studentService.getAll(courseId);
     console.log("CONTROLLER: REQUEST VALUE --> ", req.params.courseId);
     console.log("CONTROLLER: all students in db ", students);
     res.json(students);
