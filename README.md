@@ -67,6 +67,8 @@ interface Angular -->
 
 - #### instalation de dépendanes:
 `npm install`
+  if you get errors related to eslint or typescript-eslint, run command with flag --force
+`npm install --force`
 
 - #### run the app
 `npm run dev`
