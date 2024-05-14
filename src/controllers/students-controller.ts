@@ -27,7 +27,7 @@ export class StudentController {
   async create(req: Request, res: Response) {
     const { firstname, lastname, username }: Student = req.body as Student;
     const courseId = req.params.courseId;
-    const newStudent: Student = { ...req.body, courseId: Number(courseId) };
+    const newStudent: Student = { ...req.body, courseId: courseId };
     console.log("CONTROLLER: student to be created ", req.params, newStudent, firstname, lastname, username);
     try {
       if (await this.studentService.alreadyExists(username)) {
@@ -87,7 +87,7 @@ export class StudentController {
     try {
       const studentId = req.params.studentId;
       await this.studentService.delete(studentId);
-      res.json({ message: "Student deleted" });
+      res.json({ message: "Student deleted" })
     } catch (err) {
       res.json({ message: "ERROR" }).status(500);
     }

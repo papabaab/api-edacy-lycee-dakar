@@ -1,13 +1,12 @@
 
-// export interface Student{
-
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+// import { ObjectId } from "mongodb"
+import { Column, Entity, ObjectIdColumn } from "typeorm"
 
 @Entity()
 export class Course {
 
-    @PrimaryGeneratedColumn()
-    courseId?: number | string
+    @ObjectIdColumn()
+    courseId?:  string | number
 
     @Column()
     startDate!: string

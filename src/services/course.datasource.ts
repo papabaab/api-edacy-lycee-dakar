@@ -1,27 +1,32 @@
 
 import { Course } from '../models/course.model'
-import AppDataSource from '../data-source'
+import appDataSource from '../data-source'
+import { ObjectId } from 'typeorm'
+// import { ObjectId } from 'typeorm'
 
 
 export class CourseDataSource {
    
-
+repo = appDataSource.getMongoRepository(Course)
     constructor(){
+
     }
 
 
     getCourseById(courseId: string|number): Promise<Course|null> {  
-        return AppDataSource.manager.findOneBy(Course, {courseId: courseId})
+        // return appDataSource.manager.findOneBy(Course, {courseId: courseId})
+        return this.repo.findOneBy(courseId)
     }
 
 
     
     getAllCourses(): Promise<Course[]> {
-        return AppDataSource.manager.find(Course)
+        // return appDataSource.manager.find(Course)
+        return this.repo.find()
     }
 
      async courseAlreadyExists(courseTitle: string): Promise<boolean> {
-        const course: Course|null = await AppDataSource.manager.findOneBy(Course, {courseTitle: courseTitle})
+        const course: Course|null = await appDataSource.manager.findOne(Course,{where: { courseTitle: courseTitle }})
        return new Promise((resolve) => {
             if(course) resolve(true)
             else resolve(false)
@@ -30,23 +35,28 @@ export class CourseDataSource {
 
 
     deleteCourse(courseId: string | number): Promise<any> {
-        return AppDataSource.manager.delete(Course, {courseId: courseId})
+        // return appDataSource.manager.delete(Course, {courseId: courseId})
+        return this.repo.delete(courseId)
 
     }
 
 
     async insertNewCourse(course: Course): Promise<Course> {
-        const newCourse:Course =  await AppDataSource.manager.save(Course, course)
+        const newCourse:Course =  await appDataSource.manager.save(Course, course)
         console.log("DATABASE: created Course: ", newCourse)
         return newCourse
     }
 
-    async updateCourse(courseId: string | number, course: Course): Promise<Course[] | undefined> {
+    async updateCourse(courseId: string | number, course: Course): Promise<Course | null> {
         try{
-        await AppDataSource.manager.update(Course, {courseId: courseId}, course)
-        return AppDataSource.manager.findBy(Course, {courseId: courseId})
+        // await appDataSource.manager.update(Course, {courseId: courseId}, course)
+        await this.repo.update(courseId, course)
+        return this.repo.findOneBy(courseId)
     }
-    catch(err){console.error(err)}
+    catch(err){
+        console.error(err)
+        return null
+    }
 
     }
 

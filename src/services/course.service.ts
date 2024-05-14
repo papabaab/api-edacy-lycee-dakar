@@ -13,8 +13,9 @@ studentTable: StudentDataSource = new StudentDataSource()
     async getAll(): Promise<Course[]>  {
     // return data;
     const allCourses: FullCourse[] = await this.courseTable.getAllCourses()
+    console.log("SERVICE: all courses in db: ", allCourses)
     for(var course of allCourses){
-        course.students = await this.studentTable.getAllStudents(Number(course.courseId))
+        course.students = await this.studentTable.getAllStudents(course.courseId?.toString())
     }
     console.log("SERVICE: all courses in db: ", allCourses)
     return allCourses
@@ -54,9 +55,9 @@ studentTable: StudentDataSource = new StudentDataSource()
 
 
     async update  (courseId:string|number, course:Course): Promise<Course|undefined> {
-    const result :Course[]|undefined = await this.courseTable.updateCourse(courseId, course)
+    const result :Course|null = await this.courseTable.updateCourse(courseId, course)
     console.log('COURSE UPDATED: ', result)
-    return result? result[0]: undefined
+    return result? result: undefined
 }
 
 }

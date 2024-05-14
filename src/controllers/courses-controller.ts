@@ -21,6 +21,7 @@ export class CourseController  {
 
 
     async getById (req:Request, res:Response) {
+        console.log("CONTROLLER: REQUEST VALUE --> ", req.params.courseId);
     const course: Course = await this.courseService.getById(req.params.courseId) as Course
     console.log("CONTROLLER: get course by courseId ", course)
     res.json(course)

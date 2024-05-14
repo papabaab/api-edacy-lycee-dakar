@@ -10,7 +10,7 @@ export class StudentService {
 
 db: StudentDataSource = new StudentDataSource()
 
-    async getAll(courseId?: number): Promise<Student[]>  {
+    async getAll(courseId?: number|string): Promise<Student[]>  {
     // return data;
     const allStudents = await this.db.getAllStudents(courseId)
     console.log("SERVICE: all students in db: ", allStudents)
@@ -56,13 +56,9 @@ db: StudentDataSource = new StudentDataSource()
 
 
     async update  (id:string|number, student:Student): Promise<Student|undefined> {
-    // const index = data.findIndex((e:Student)=>e.id == id)
-    // if(index != -1){
-    //     data[index] = {...student, id}
-    // } else throw new Error('User not found')    
-    const result :Student[]|undefined = await this.db.updateStudent(id, student)
+    const result :Student|null = await this.db.updateStudent(id, student)
     console.log('STUDENT UPDATED: ', result)
-    return result? result[0]: undefined
+    return result? result: undefined
 }
 
 }
